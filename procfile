@@ -1,1 +1,1 @@
-web: gunicorn daps_visualisation:server
+web: gunicorn daps_visualisation:app
