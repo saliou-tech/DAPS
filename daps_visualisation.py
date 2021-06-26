@@ -21,6 +21,7 @@ from dash.dependencies import Input, Output
 kobdata=GetKoboData()
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+server=app.server
 labeld_results=kobdata.getAllData()
 data=kobdata.getDapsDataFrame(labeld_results)
 # print(data)
