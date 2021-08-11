@@ -56,7 +56,7 @@ class GetKoboData:
             B2.append(labeled_results[i]['results']['B2']['answer_label'])
             B3.append(labeled_results[i]['results']['B3']['answer_label'])
             B4.append(labeled_results[i]['results']['B4']['answer_label'])
-            B4_001.append(labeled_results[i]['results']['B4']['answer_label'])
+            B4_001.append(labeled_results[i]['results']['B4_001']['answer_label'])
             B5.append(labeled_results[i]['results']['B5']['answer_label'])
             B6.append(labeled_results[i]['results']['B6']['answer_label'])
             B8.append(labeled_results[i]['results']['B8']['answer_label'])
@@ -175,10 +175,17 @@ class GetKoboData:
             E14.append(labeled_results[i]['results']['E14']['answer_label'].strip())
             E15.append(labeled_results[i]['results']['E15']['answer_label'])
             if(labeled_results[i]['results']['E15']['answer_label']=="Non"):
-                E16.append("NA")
+                E16.append("NaN")
             else:
                 E16.append(labeled_results[i]['results']['E16']['answer_label'].strip())
-            E18.append(labeled_results[i]['results']['E18']['answer_label'].strip())
+                print(E18)
+            try:
+                E18.append(labeled_results[i]['results']['E18']['answer_label'].strip())
+
+            except:
+                E18.append("NaN")
+                print("cette question n'existe pas ")
+    
             HF.append(labeled_results[i]['results']['HF']['answer_label'].strip())
 
 
